@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "KNBk0s6vfP2CV5fBFUwidK/viU4DhXiNgiei+iBsOCVAQbftTejYhzFJ5ZFcv8pQ+56NXGFXBW/CnhiW/j082A==",
+  "success": true,
+  "projectFilePath": "/home/nhh/projects/docker-kubernetes-demo/Hello-dotnet-core/Hello-dotnet-core/Hello-dotnet-core.csproj",
+  "expectedPackageFiles": [
+    "/home/nhh/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/nhh/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/nhh/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/home/nhh/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/home/nhh/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/home/nhh/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
