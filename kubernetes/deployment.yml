@@ -1,0 +1,55 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-hello-world
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-hello-world
+  template:
+    metadata:
+      labels:
+        app: simple-hello-world
+    spec:
+      containers:
+        - name: simple-hello-world
+          image: softwarehuset/my-application:latest
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "100m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+          - containerPort: 5000
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-hello-world
+spec:
+  ports:
+  - port: 5000
+    targetPort: 5000
+    name: tcp
+  selector:
+    app: simple-hello-world
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: simple-hello-world-ingress
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: simple-hello-world
+          servicePort: 5000
